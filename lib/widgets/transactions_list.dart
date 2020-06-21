@@ -1,3 +1,4 @@
+import 'package:expense_calculatror/widgets/percent_calculator.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -38,20 +39,21 @@ class TransactionList extends StatelessWidget {
                     margin: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                     shape: Theme.of(context).cardTheme.shape,
                     child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Theme.of(context).primaryColor,
-                        radius: 30,
-                        child: FittedBox(
-                          child: Text(
-                            "\$${userTransactions[index].amount.toStringAsFixed(2)}",
-                            style: TextStyle(
-                                fontWeight: Theme.of(context)
-                                    .textTheme
-                                    .headline6
-                                    .fontWeight),
-                          ),
-                        ),
-                      ),
+                      leading: CustomPaint(painter: PercentCircle(percentage:180 ),),
+                      // CircleAvatar(
+                      //   backgroundColor: Theme.of(context).primaryColor,
+                      //   radius: 30,
+                      //   child: FittedBox(
+                      //     child: Text(
+                      //       "\$${userTransactions[index].amount.toStringAsFixed(2)}",
+                      //       style: TextStyle(
+                      //           fontWeight: Theme.of(context)
+                      //               .textTheme
+                      //               .headline6
+                      //               .fontWeight),
+                      //     ),
+                      //   ),
+                      // ),
                       title: Text(
                         userTransactions[index].title,
                         style: Theme.of(context).textTheme.headline6,

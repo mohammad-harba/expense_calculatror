@@ -1,0 +1,4 @@
+#Sun Jun 21 18:05:24 CEST 2020
+base.0=/home/poco12/flutter_guide/expense_calculatror/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
